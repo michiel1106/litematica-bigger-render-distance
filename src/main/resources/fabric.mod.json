@@ -1,0 +1,38 @@
+ {
+	"schemaVersion": 1,
+	"id": "litematica-bigger-render-distance",
+	"version": "${version}",
+	"name": "litematica-bigger-render-distance",
+	"description": "Adds a slider that allows for customization of the schematic render distance.",
+	"authors": [
+		"Bikerboys"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/litematica-bigger-render-distance/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"bikeboys.litematicabiggerrenderdistance.LitematicaBiggerRenderDistance"
+		],
+		"client": [
+			"bikeboys.litematicabiggerrenderdistance.client.LitematicaBiggerRenderDistanceClient"
+		]
+	},
+	"mixins": [
+		"litematica-bigger-render-distance.mixins.json",
+		{
+			"config": "litematica-bigger-render-distance.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
